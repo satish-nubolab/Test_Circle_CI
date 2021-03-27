@@ -9,4 +9,5 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-            python3 test.py
+            pip install -r requirements.txt
+            python3 tests.py
