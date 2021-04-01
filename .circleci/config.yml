@@ -42,7 +42,7 @@ jobs:
             python3 tests.py
       - run:
           name: Linter
-	  command: |
+          command: |
             flake8 src/
             flake8 test/
       - run:
