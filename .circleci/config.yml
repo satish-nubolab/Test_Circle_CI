@@ -21,7 +21,7 @@ jobs:
       - store_artifacts:
           path: test-reports/
           destination: python_app
-		  
+
   lint-and-coverage:
     docker:
       - image: circleci/python:3.6
