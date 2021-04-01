@@ -40,23 +40,23 @@ jobs:
           name: Running tests
           command: |
             python3 tests.py
-	  - run:
+      - run:
           name: Linter
-		  command: |
-		    flake8 src/
-			flake8 test/
-	  - run:
-	      name: Coverage
-		  command: 
-		     coverage run
-			 coverage report
-			
+	  command: |
+            flake8 src/
+            flake8 test/
+      - run:
+          name: Coverage
+          command: 
+            coverage run
+            coverage report
+
       - store_artifacts:
           path: test-reports/
           destination: python_app
-	
+
 workflows:
   main:
     jobs:
-	   - build-and-test
-	   - lint-and-coverage
+         - build-and-test
+	 - lint-and-coverage
