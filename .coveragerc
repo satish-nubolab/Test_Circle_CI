@@ -1,4 +1,6 @@
 [run]
 command_line = -m unittest discover
-source = 
-      src/
+source =
+    src/
+[report]
+fail_under = 68
