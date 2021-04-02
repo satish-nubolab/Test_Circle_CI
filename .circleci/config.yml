@@ -47,7 +47,7 @@ jobs:
             flake8 test/
       - run:
           name: Coverage
-          command: 
+          command: |
             coverage run
             coverage report
 
