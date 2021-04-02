@@ -6,4 +6,16 @@ class Person:
    
     # Sample Method 
     def say_hi(self):
-        print('Hello, my name is', self.name)
+        return 'hello world'
+ 
+    def process_input(a, b, operation):
+        if operation == “add”:
+            return a + b
+        if operation == “subtract”:
+            return a – b
+        if operation == “multiple”:
+            return a * b
+        if operation == “divide”:
+            if b == 0:
+                return “Invalid Input”
+        return a / b
