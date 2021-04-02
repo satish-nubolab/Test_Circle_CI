@@ -9,13 +9,13 @@ class Person:
         return 'hello world'
  
     def process_input(a, b, operation):
-        if operation == “add”:
+        if operation == "add":
             return a + b
-        if operation == “subtract”:
+        if operation == "subtract":
             return a – b
-        if operation == “multiple”:
+        if operation == "multiple":
             return a * b
-        if operation == “divide”:
+        if operation == "divide":
             if b == 0:
-                return “Invalid Input”
+                return "Invalid Input"
         return a / b
