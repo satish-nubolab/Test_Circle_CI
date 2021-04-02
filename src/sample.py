@@ -7,8 +7,9 @@ class Person:
     # Sample Method 
     def say_hi(self):
         return 'hello world'
- 
+
     def process_input(a, b, operation):
+        print("::::::::::", a, b, operation)
         if operation == "add":
             return a + b
         if operation == "subtract":
