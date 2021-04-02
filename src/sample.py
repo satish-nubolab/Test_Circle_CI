@@ -13,10 +13,10 @@ class Person:
         if operation == "add":
             return a + b
         if operation == "subtract":
-            return a – b
+            return a - b
         if operation == "multiple":
             return a * b
         if operation == "divide":
             if b == 0:
                 return "Invalid Input"
-        return a / b
+            return a / b
