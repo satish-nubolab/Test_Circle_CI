@@ -1,1 +1,1 @@
-from .sample import Person
+from .sample import Person  # noqa: F401
