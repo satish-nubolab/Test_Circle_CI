@@ -9,7 +9,6 @@ class Person:
         return 'hello world'
 
     def process_input(self, a, b, operation):
-        print("::::::::::", a, b, operation)
         if operation == "add":
             return a + b
         if operation == "subtract":
