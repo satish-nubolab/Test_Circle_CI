@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Linter
           command: |
-          
+            flake8 src/
             flake8 test/
       - run:
           name: Coverage
