@@ -35,4 +35,4 @@ class Test(unittest.TestCase):
 
     def test_seventh(self):
         p = Person('abc')
-        self.assertEqual(30, p.process_input(10, 200, 'add'))
+        self.assertEqual(30, p.process_input(10, 200, 'divide'))
