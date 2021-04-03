@@ -1,10 +1,10 @@
 class Person:
-   
-    # init method or constructor 
+
+    # init method or constructor
     def __init__(self, name):
         self.name = name
-   
-    # Sample Method 
+
+    # Sample Method
     def say_hi(self):
         return 'hello world'
 
