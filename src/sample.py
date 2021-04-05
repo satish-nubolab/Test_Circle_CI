@@ -5,8 +5,8 @@ class Person:
         self.name = name
 
     # Sample Method
-    def say_hi(self):
-        return 'hello world'
+    #def say_hi(self):
+    #    return 'hello world'
 
     def process_input(self, a, b, operation):
         if operation == "add":
