@@ -36,3 +36,7 @@ class Test(unittest.TestCase):
     def test_seventh(self):
         p = Person('abc')
         self.assertEqual(210, p.process_input(10, 200, 'add'))
+
+    def test_seventh(self):
+        p = Person('abc')
+        self.assertEqual("Invalid Input", p.process_input(10, 0, 'divide'))
