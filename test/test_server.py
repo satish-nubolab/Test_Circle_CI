@@ -38,5 +38,5 @@ class Test(unittest.TestCase):
         self.assertEqual(210, p.process_input(10, 200, 'add'))
 
     def test_eighth(self):
-        p = Person('abc')
+        p = Person('a')
         self.assertEqual("Invalid Input", p.process_input(10, 0, 'divide'))
