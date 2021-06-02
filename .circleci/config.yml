@@ -14,7 +14,6 @@ jobs:
           name: Build Kubelibrary container image
           command: |
             docker build -t kubelibrary -f testcases/Dockerfile .
-      - k3d/k3d-helpers
       - k3d/k3d-up:
           cluster-name: testk3d-2
           #k3s-bin-version: v4.4.2
