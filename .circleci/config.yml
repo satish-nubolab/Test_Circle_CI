@@ -3,38 +3,27 @@ version: 2.1
 orbs:
   python: circleci/python@0.3.2
 jobs:
-  build-and-test:
+test-on-k8s:
     executor: python/default
     environment:
       PYTHONPATH=./src
     steps:
+      - setup_remote_docker
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
-      - python/test
-
-  lint-and-coverage:
-    executor: python/default
-    environment:
-      PYTHONPATH=./src
-    steps:
-      - checkout
-      - python/install-deps
       - run:
-          name: Linter
+          name: Build Kubelibrary container image
           command: |
-            flake8 src/
-            flake8 test/
-      - run:
-          name: Coverage
-          command: |
-            coverage run
-            coverage report
+            docker build -t kubelibrary -f testcases/Dockerfile .
+      - k3d/k3d-helpers
+      - k3d/k3d-up:
+          cluster-name: testk3d-2
+          #k3s-bin-version: v4.4.2
 
 workflows:
   main:
     jobs:
-         - build-and-test
-         - lint-and-coverage
+      - test-on-k8s:
+          filters:
+            tags:
+              only: /.*/
          
