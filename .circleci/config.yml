@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   python: circleci/python@0.3.2
 jobs:
-test-on-k8s:
+  test-on-k8s:
     executor: python/default
     environment:
       PYTHONPATH=./src
